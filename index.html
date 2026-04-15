@@ -32,67 +32,15 @@
             <h1 class="text-5xl font-semibold tracking-tight leading-[1.1] mb-6">
                 Bringing calm to the <br/><span class="text-gray-400 font-light italic">enterprise AI frontier.</span>
             </h1>
-            <p class="text-lg text-gray-500 leading-relaxed mb-6">
+            <p class="text-lg text-gray-500 leading-relaxed mb-4">
                 Building a durable intelligence layer requires more than code—it requires the synthesis of tech, vision, and organizational excellence.
             </p>
+            <p class="text-lg text-gray-500 leading-relaxed mb-6">
+                Intelligence Layer brings the expertise to your enterprise to successfully migrate to an AI-first organization. Our people have experience in both the tech of AI and the human processes.
+            </p>
             <a href="https://sequoiacap.com/article/from-hierarchy-to-intelligence/" target="_blank" class="text-xs font-bold uppercase tracking-widest border-b-2 border-black pb-1 hover:text-gray-400 hover:border-gray-400 transition-all">
-                The Vision →
+                Intelligence Layer, according to Sequoia Capital →
             </a>
         </header>
 
-        <section id="form-container" class="bg-white/40 backdrop-blur-xl border border-white p-10 rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.05)]">
-            <form id="waitlist-form" class="space-y-8">
-                <div class="space-y-6">
-                    <input type="text" name="name" placeholder="Full Name" required class="w-full bg-transparent border-b border-gray-200 py-3 focus:outline-none focus:border-black transition-colors placeholder:text-gray-300">
-                    <input type="email" name="email" placeholder="Corporate Email" required class="w-full bg-transparent border-b border-gray-200 py-3 focus:outline-none focus:border-black transition-colors placeholder:text-gray-300">
-                    <select name="revenue" class="w-full bg-transparent border-b border-gray-200 py-3 focus:outline-none focus:border-black transition-colors text-gray-500">
-                        <option value="" disabled selected>Company Revenue</option>
-                        <option value="$1M - $10M">$1M - $10M</option>
-                        <option value="$10M - $50M">$10M - $50M</option>
-                        <option value="$50M - $250M">$50M - $250M</option>
-                        <option value="$250M+">$250M+</option>
-                    </select>
-                </div>
-                <button type="submit" id="submit-btn" class="w-full bg-black text-white py-5 rounded-2xl font-semibold tracking-wide hover:bg-gray-800 transition-all">
-                    Request Early Access
-                </button>
-            </form>
-            <div id="thank-you" class="hidden text-center py-6">
-                <p class="text-xl font-medium mb-2">Registration Complete.</p>
-                <p class="text-gray-400">Intelligence Layer will reach out when appropriate.</p>
-            </div>
-        </section>
-    </main>
-
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbyIf8SH1W-ErftSPgp6jOMnfs6uLo54ToKDKXfaMTTibfKfsnIRjBXwnXN0FFeaU9zDig/exec';
-        const form = document.getElementById('waitlist-form');
-        const btn = document.getElementById('submit-btn');
-
-        form.addEventListener('submit', e => {
-            e.preventDefault();
-            btn.disabled = true;
-            btn.innerText = "Synchronizing...";
-
-            const formData = new FormData(form);
-            const data = Object.fromEntries(formData.entries());
-
-            fetch(scriptURL, {
-                method: 'POST',
-                mode: 'no-cors', // Essential for Google Apps Script
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(data)
-            })
-            .then(() => {
-                form.classList.add('hidden');
-                document.getElementById('thank-you').classList.remove('hidden');
-            })
-            .catch(error => {
-                console.error('Error!', error.message);
-                btn.disabled = false;
-                btn.innerText = "Try Again";
-            });
-        });
-    </script>
-</body>
-</html>
+        <section id="form-container" class="bg-white/40 backdrop-blur-xl border border-white p-10 rounded-3xl shadow-[0_20px_50px_rgba(0,0
